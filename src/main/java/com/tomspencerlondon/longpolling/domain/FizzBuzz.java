@@ -3,14 +3,14 @@ package com.tomspencerlondon.longpolling.domain;
 public class FizzBuzz {
 
   public String from(int number) {
-    if (number == 0) {
-      return "";
-    }
+    String result = "";
 
     if (number == 3) {
-      return "Fizz";
+      result += "Fizz";
+    } else if (number > 0) {
+      result += number;
     }
 
-    return "" + number;
+    return result;
   }
 }
