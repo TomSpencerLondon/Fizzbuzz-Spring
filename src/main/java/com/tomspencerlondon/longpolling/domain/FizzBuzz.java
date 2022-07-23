@@ -4,12 +4,15 @@ public class FizzBuzz {
 
   public String from(int number) {
     String result = "";
+    if (number == 0) {
+      return result;
+    }
 
-    if (number == 3) {
+    if (number % 3 == 0) {
       result += "Fizz";
     } else if (number == 5) {
       result += "Fizzbuzz";
-    } else if (number > 0) {
+    } else {
       result += number;
     }
 

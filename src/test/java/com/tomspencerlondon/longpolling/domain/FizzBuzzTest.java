@@ -65,4 +65,14 @@ public class FizzBuzzTest {
     assertThat(result)
         .isEqualTo("Fizzbuzz");
   }
+
+  @Test
+  void sixReturnsFizz() {
+    FizzBuzz fizzBuzz = new FizzBuzz();
+
+    String result = fizzBuzz.from(6);
+
+    assertThat(result)
+        .isEqualTo("Fizz");
+  }
 }
