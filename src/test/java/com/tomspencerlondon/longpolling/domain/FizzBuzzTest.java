@@ -207,7 +207,12 @@ public class FizzBuzzTest {
   }
 
   @Test
-  void twentyReturnsFizzbuzz() {
+  void twentyReturnsFizz() {
+    FizzBuzz fizzBuzz = new FizzBuzz();
 
+    String result = fizzBuzz.from(20);
+
+    assertThat(result)
+        .isEqualTo("buzz");
   }
 }
