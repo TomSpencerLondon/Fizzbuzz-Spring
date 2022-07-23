@@ -8,7 +8,7 @@
 <body>
 <main class="pt-8 text-center">
   <h1 class="mb-8 text-3xl font-bold uppercase">Fizz Buzz</h1>
-  <h2 id="number" class="mb-8 text-2xl" th:data-number="${number}">1</h2>
+  <h2 id="number" class="mb-8 text-2xl" th:data-number="${number}"></h2>
 </main>
 </body>
 <script>
@@ -20,10 +20,14 @@
       await fetch(`/api/fizzbuzz?number=${number}`, {method: "POST", timeout: 1000})
       .then(response => response.text())
       .then(resNumber => {
+        element.textContent = number;
         number = parseInt(resNumber);
-        console.log(number);
       });
+
+      await new Promise(r => setTimeout(r, 1000));
     }
+
+    element.setAttribute("data-number", number);
   }
 
   main();
