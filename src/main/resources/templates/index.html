@@ -1,0 +1,28 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      lang="en">
+<head>
+  <link th:href="@{/tailwind.css}" href="../static/tailwind.css" rel="stylesheet">
+</head>
+<body>
+<main class="pt-8 text-center">
+  <h1 class="mb-8 text-3xl font-bold uppercase">Fizz Buzz</h1>
+  <h2 class="mb-8 text-1xl">Pick your number</h2>
+  <div class="text-center">
+    <form action="#" th:action="@{/fizzbuzz}" th:method="post"
+          class="w-full">
+      <div class="mb-8 flex items-center justify-center">
+        <label for="number" class="sr-only">Number</label>
+        <input type="number" name="number" id="number" class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block sm:text-sm border-gray-300 rounded-md" placeholder="choose a number">
+      </div>
+      <button type="submit"
+              id="start"
+              class="ml-2 py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-green-600 hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500">
+        Send Number
+      </button>
+    </form>
+  </div>
+</main>
+</body>
+</html>

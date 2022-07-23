@@ -1,0 +1,14 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      lang="en">
+<head>
+  <link th:href="@{/tailwind.css}" href="../static/tailwind.css" rel="stylesheet">
+</head>
+<body>
+<main class="pt-8 text-center">
+  <h1 class="mb-8 text-3xl font-bold uppercase">Fizz Buzz</h1>
+  <h2 class="mb-8 text-2xl" th:text="${number}">1</h2>
+</main>
+</body>
+</html>
