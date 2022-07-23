@@ -10,7 +10,7 @@ public class FizzBuzz {
 
     if (number % 3 == 0) {
       result += "Fizz";
-    } else if (number == 5) {
+    } else if (number % 5 == 0) {
       result += "Fizzbuzz";
     } else {
       result += number;

@@ -75,4 +75,44 @@ public class FizzBuzzTest {
     assertThat(result)
         .isEqualTo("Fizz");
   }
+
+  @Test
+  void sevenReturnsNumberAsString() {
+    FizzBuzz fizzBuzz = new FizzBuzz();
+
+    String result = fizzBuzz.from(7);
+
+    assertThat(result)
+        .isEqualTo("7");
+  }
+
+  @Test
+  void eightReturnsNumberAsString() {
+    FizzBuzz fizzBuzz = new FizzBuzz();
+
+    String result = fizzBuzz.from(8);
+
+    assertThat(result)
+        .isEqualTo("8");
+  }
+
+  @Test
+  void nineReturnsFizz() {
+    FizzBuzz fizzBuzz = new FizzBuzz();
+
+    String result = fizzBuzz.from(9);
+
+    assertThat(result)
+        .isEqualTo("Fizz");
+  }
+
+  @Test
+  void tenReturnsFizzbuzz() {
+    FizzBuzz fizzBuzz = new FizzBuzz();
+
+    String result = fizzBuzz.from(10);
+
+    assertThat(result)
+        .isEqualTo("Fizzbuzz");
+  }
 }
