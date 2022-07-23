@@ -9,6 +9,6 @@ public class FizzBuzz {
     }
 
     Result output = Result.from(number);
-    return output == Result.NUMBER ? "" + number : output.getResult();
+    return output == Result.NUMBER ? "" + number : output.value();
   }
 }
