@@ -5,7 +5,7 @@ public enum Result {
 
   private final String result;
 
-  private Result(String result) {
+  Result(String result) {
     this.result = result;
   }
 
