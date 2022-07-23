@@ -1,4 +1,4 @@
-package com.tomspencerlondon.longpolling.domain;
+package com.tomspencerlondon.longpolling.hexagon.domain;
 
 public enum Result {
   FIZZ("Fizz"), BUZZ("buzz"), FIZZBUZZ("Fizzbuzz"), NUMBER(null);

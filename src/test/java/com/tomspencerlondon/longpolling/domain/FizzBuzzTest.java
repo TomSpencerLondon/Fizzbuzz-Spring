@@ -2,6 +2,7 @@ package com.tomspencerlondon.longpolling.domain;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
+import com.tomspencerlondon.longpolling.hexagon.domain.FizzBuzz;
 import org.junit.jupiter.api.Test;
 
 public class FizzBuzzTest {

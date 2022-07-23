@@ -1,4 +1,4 @@
-package com.tomspencerlondon.longpolling.domain;
+package com.tomspencerlondon.longpolling.hexagon.domain;
 
 public class FizzBuzz {
 
