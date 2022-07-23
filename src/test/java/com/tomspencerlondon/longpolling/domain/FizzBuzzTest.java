@@ -10,10 +10,9 @@ public class FizzBuzzTest {
   @Test
   void zeroReturnsEmptyString() {
     FizzBuzz fizzBuzz = new FizzBuzz();
+    fizzBuzz.next(0);
 
-    String result = fizzBuzz.from(0);
-
-    assertThat(result)
+    assertThat(fizzBuzz.result())
         .isEmpty();
   }
 
@@ -21,9 +20,9 @@ public class FizzBuzzTest {
   void oneReturnsNumberAsString() {
     FizzBuzz fizzBuzz = new FizzBuzz();
 
-    String result = fizzBuzz.from(1);
+    fizzBuzz.next(1);
 
-    assertThat(result)
+    assertThat(fizzBuzz.result())
         .isEqualTo("1");
   }
 
@@ -31,9 +30,9 @@ public class FizzBuzzTest {
   void twoReturnsNumberAsString() {
     FizzBuzz fizzBuzz = new FizzBuzz();
 
-    String result = fizzBuzz.from(2);
+    fizzBuzz.next(2);
 
-    assertThat(result)
+    assertThat(fizzBuzz.result())
         .isEqualTo("2");
   }
 
@@ -41,9 +40,9 @@ public class FizzBuzzTest {
   void threeReturnsFizz() {
     FizzBuzz fizzBuzz = new FizzBuzz();
 
-    String result = fizzBuzz.from(3);
+    fizzBuzz.next(3);
 
-    assertThat(result)
+    assertThat(fizzBuzz.result())
         .isEqualTo("Fizz");
   }
 
@@ -51,9 +50,9 @@ public class FizzBuzzTest {
   void fourReturnsNumberAsString() {
     FizzBuzz fizzBuzz = new FizzBuzz();
 
-    String result = fizzBuzz.from(4);
+    fizzBuzz.next(4);
 
-    assertThat(result)
+    assertThat(fizzBuzz.result())
         .isEqualTo("4");
   }
 
@@ -61,9 +60,9 @@ public class FizzBuzzTest {
   void fiveReturnsFizzBuzz() {
     FizzBuzz fizzBuzz = new FizzBuzz();
 
-    String result = fizzBuzz.from(5);
+    fizzBuzz.next(5);
 
-    assertThat(result)
+    assertThat(fizzBuzz.result())
         .isEqualTo("buzz");
   }
 
@@ -71,9 +70,9 @@ public class FizzBuzzTest {
   void sixReturnsFizz() {
     FizzBuzz fizzBuzz = new FizzBuzz();
 
-    String result = fizzBuzz.from(6);
+    fizzBuzz.next(6);
 
-    assertThat(result)
+    assertThat(fizzBuzz.result())
         .isEqualTo("Fizz");
   }
 
@@ -81,9 +80,9 @@ public class FizzBuzzTest {
   void sevenReturnsNumberAsString() {
     FizzBuzz fizzBuzz = new FizzBuzz();
 
-    String result = fizzBuzz.from(7);
+    fizzBuzz.next(7);
 
-    assertThat(result)
+    assertThat(fizzBuzz.result())
         .isEqualTo("7");
   }
 
@@ -91,9 +90,9 @@ public class FizzBuzzTest {
   void eightReturnsNumberAsString() {
     FizzBuzz fizzBuzz = new FizzBuzz();
 
-    String result = fizzBuzz.from(8);
+    fizzBuzz.next(8);
 
-    assertThat(result)
+    assertThat(fizzBuzz.result())
         .isEqualTo("8");
   }
 
@@ -101,9 +100,9 @@ public class FizzBuzzTest {
   void nineReturnsFizz() {
     FizzBuzz fizzBuzz = new FizzBuzz();
 
-    String result = fizzBuzz.from(9);
+    fizzBuzz.next(9);
 
-    assertThat(result)
+    assertThat(fizzBuzz.result())
         .isEqualTo("Fizz");
   }
 
@@ -111,9 +110,9 @@ public class FizzBuzzTest {
   void tenReturnsFizzbuzz() {
     FizzBuzz fizzBuzz = new FizzBuzz();
 
-    String result = fizzBuzz.from(10);
+    fizzBuzz.next(10);
 
-    assertThat(result)
+    assertThat(fizzBuzz.result())
         .isEqualTo("buzz");
   }
 
@@ -121,9 +120,9 @@ public class FizzBuzzTest {
   void elevenReturnsNumberAsString() {
     FizzBuzz fizzBuzz = new FizzBuzz();
 
-    String result = fizzBuzz.from(11);
+    fizzBuzz.next(11);
 
-    assertThat(result)
+    assertThat(fizzBuzz.result())
         .isEqualTo("11");
   }
 
@@ -131,9 +130,9 @@ public class FizzBuzzTest {
   void twelveReturnsFizz() {
     FizzBuzz fizzBuzz = new FizzBuzz();
 
-    String result = fizzBuzz.from(12);
+    fizzBuzz.next(12);
 
-    assertThat(result)
+    assertThat(fizzBuzz.result())
         .isEqualTo("Fizz");
   }
 
@@ -141,9 +140,9 @@ public class FizzBuzzTest {
   void thirteenReturnsNumberAsString() {
     FizzBuzz fizzBuzz = new FizzBuzz();
 
-    String result = fizzBuzz.from(13);
+    fizzBuzz.next(13);
 
-    assertThat(result)
+    assertThat(fizzBuzz.result())
         .isEqualTo("13");
   }
 
@@ -151,9 +150,9 @@ public class FizzBuzzTest {
   void fourteenReturnsNumberAsString() {
     FizzBuzz fizzBuzz = new FizzBuzz();
 
-    String result = fizzBuzz.from(14);
+    fizzBuzz.next(14);
 
-    assertThat(result)
+    assertThat(fizzBuzz.result())
         .isEqualTo("14");
   }
 
@@ -161,9 +160,9 @@ public class FizzBuzzTest {
   void fifteenReturnsFizzbuzz() {
     FizzBuzz fizzBuzz = new FizzBuzz();
 
-    String result = fizzBuzz.from(15);
+    fizzBuzz.next(15);
 
-    assertThat(result)
+    assertThat(fizzBuzz.result())
         .isEqualTo("Fizzbuzz");
   }
 
@@ -171,9 +170,9 @@ public class FizzBuzzTest {
   void sixteenReturnsNumberAsString() {
     FizzBuzz fizzBuzz = new FizzBuzz();
 
-    String result = fizzBuzz.from(16);
+    fizzBuzz.next(16);
 
-    assertThat(result)
+    assertThat(fizzBuzz.result())
         .isEqualTo("16");
   }
 
@@ -181,9 +180,9 @@ public class FizzBuzzTest {
   void seventeenReturnsNumberAsString() {
     FizzBuzz fizzBuzz = new FizzBuzz();
 
-    String result = fizzBuzz.from(17);
+    fizzBuzz.next(17);
 
-    assertThat(result)
+    assertThat(fizzBuzz.result())
         .isEqualTo("17");
   }
 
@@ -191,9 +190,9 @@ public class FizzBuzzTest {
   void eighteenReturnsFizz() {
     FizzBuzz fizzBuzz = new FizzBuzz();
 
-    String result = fizzBuzz.from(18);
+    fizzBuzz.next(18);
 
-    assertThat(result)
+    assertThat(fizzBuzz.result())
         .isEqualTo("Fizz");
   }
 
@@ -201,9 +200,9 @@ public class FizzBuzzTest {
   void nineteenReturnsNumberAsString() {
     FizzBuzz fizzBuzz = new FizzBuzz();
 
-    String result = fizzBuzz.from(19);
+    fizzBuzz.next(19);
 
-    assertThat(result)
+    assertThat(fizzBuzz.result())
         .isEqualTo("19");
   }
 
@@ -211,9 +210,9 @@ public class FizzBuzzTest {
   void twentyReturnsFizz() {
     FizzBuzz fizzBuzz = new FizzBuzz();
 
-    String result = fizzBuzz.from(20);
+    fizzBuzz.next(20);
 
-    assertThat(result)
+    assertThat(fizzBuzz.result())
         .isEqualTo("buzz");
   }
 }

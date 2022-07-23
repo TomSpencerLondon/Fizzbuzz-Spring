@@ -1,14 +1,22 @@
 package com.tomspencerlondon.longpolling.hexagon.domain;
 
 public class FizzBuzz {
+  private Result result;
+  private int number;
 
-  public String from(int number) {
-    String result = "";
+  public void next(int number) {
     if (number == 0) {
-      return result;
+      return;
+    }
+    result = Result.from(number);
+    this.number = number;
+  }
+
+  public String result() {
+    if (result == null) {
+      return "";
     }
 
-    Result output = Result.from(number);
-    return output == Result.NUMBER ? "" + number : output.value();
+    return result.equals(Result.NUMBER) ? "" + number : result.value();
   }
 }
