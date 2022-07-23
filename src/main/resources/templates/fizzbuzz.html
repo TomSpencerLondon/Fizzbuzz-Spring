@@ -8,7 +8,24 @@
 <body>
 <main class="pt-8 text-center">
   <h1 class="mb-8 text-3xl font-bold uppercase">Fizz Buzz</h1>
-  <h2 class="mb-8 text-2xl" th:text="${number}">1</h2>
+  <h2 id="number" class="mb-8 text-2xl" th:data-number="${number}">1</h2>
 </main>
 </body>
+<script>
+  async function main() {
+    let element = document.getElementById("number");
+    let number = element.getAttribute("data-number");
+
+    while (number > 0) {
+      await fetch(`/api/fizzbuzz?number=${number}`, {method: "POST", timeout: 1000})
+      .then(response => response.text())
+      .then(resNumber => {
+        number = parseInt(resNumber);
+        console.log(number);
+      });
+    }
+  }
+
+  main();
+</script>
 </html>
