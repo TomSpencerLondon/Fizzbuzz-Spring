@@ -7,6 +7,8 @@ public class FizzBuzz {
 
     if (number == 3) {
       result += "Fizz";
+    } else if (number == 5) {
+      result += "Fizzbuzz";
     } else if (number > 0) {
       result += number;
     }

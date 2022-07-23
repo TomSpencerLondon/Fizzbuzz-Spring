@@ -55,4 +55,14 @@ public class FizzBuzzTest {
     assertThat(result)
         .isEqualTo("4");
   }
+
+  @Test
+  void fiveReturnsFizzBuzz() {
+    FizzBuzz fizzBuzz = new FizzBuzz();
+
+    String result = fizzBuzz.from(5);
+
+    assertThat(result)
+        .isEqualTo("Fizzbuzz");
+  }
 }
