@@ -2,3 +2,11 @@
 Practice with long polling and hexagonal architecture and OOP with FizzBuzz
 
 image::https://media.giphy.com/media/tmEnOv2IuDynQ4YM9K/giphy.gif[]
+
+== Tailwind
+Uses CSS 3.x with the platform-specific command-line tool (CLI).
+Install tailwind cli at https://tailwindcss.com/blog/standalone-cli#get-started.
+This is the command to run the app with tailwind:
+```
+tailwindcss -i ./src/main/resources/static/base.css -o ./src/main/resources/static/tailwind.css --watch
+```
