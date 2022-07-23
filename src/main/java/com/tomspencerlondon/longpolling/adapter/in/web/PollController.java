@@ -26,4 +26,9 @@ public class PollController {
   public String fizzBuzz() {
     return "fizzbuzz";
   }
+
+  @PostMapping("/restart")
+  public String restart() {
+    return "redirect:/";
+  }
 }

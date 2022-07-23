@@ -8,26 +8,37 @@
 <body>
 <main class="pt-8 text-center">
   <h1 class="mb-8 text-3xl font-bold uppercase">Fizz Buzz</h1>
-  <h2 id="number" class="mb-8 text-2xl" th:data-number="${number}"></h2>
+  <h2 id="number" class="mb-8 text-2xl" th:data-number="${number}">0</h2>
+  <form th:action="@{/restart}" th:method="post"
+        class="w-full">
+    <button type="submit"
+            id="start"
+            class="ml-2 inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-green-600 hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500">
+      New Game
+    </button>
+  </form>
 </main>
 </body>
 <script>
   async function main() {
     let element = document.getElementById("number");
-    let number = element.getAttribute("data-number");
-
-    while (number > 0) {
-      await fetch(`/api/fizzbuzz?number=${number}`, {method: "POST", timeout: 1000})
-      .then(response => response.text())
-      .then(resNumber => {
-        element.textContent = number;
-        number = parseInt(resNumber);
-      });
-
+    let count = parseInt(element.getAttribute("data-number"));
+    let restart = document.getElementById("restart");
+    let reqNumber = 1;
+    while (true) {
       await new Promise(r => setTimeout(r, 1000));
+      await fetch(`/api/fizzbuzz?number=${reqNumber}`, {method: "POST", timeout: 1000})
+      .then(response => response.text())
+      .then(result => {
+        element.textContent = result.toUpperCase();
+      });
+      reqNumber++;
+      count--;
+      if (count === 0) {
+        element.setAttribute("data-number", 0);
+        break;
+      }
     }
-
-    element.setAttribute("data-number", number);
   }
 
   main();
