@@ -1,0 +1,4 @@
+== Fizz Buzz
+Practice with long polling and hexagonal architecture and OOP with FizzBuzz
+
+image::https://media.giphy.com/media/tmEnOv2IuDynQ4YM9K/giphy.gif[]
