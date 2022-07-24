@@ -13,7 +13,7 @@ public class FizzBuzzTest {
     fizzBuzz.next(0);
 
     assertThat(fizzBuzz.result())
-        .isEmpty();
+        .isEqualTo("0");
   }
 
   @Test
