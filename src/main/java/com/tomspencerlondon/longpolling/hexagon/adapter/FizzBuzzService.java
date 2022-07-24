@@ -4,7 +4,7 @@ import com.tomspencerlondon.longpolling.hexagon.domain.FizzBuzz;
 
 public class FizzBuzzService {
 
-  private FizzBuzz fizzBuzz;
+  private final FizzBuzz fizzBuzz;
   public FizzBuzzService(FizzBuzz fizzBuzz) {
     this.fizzBuzz = fizzBuzz;
   }

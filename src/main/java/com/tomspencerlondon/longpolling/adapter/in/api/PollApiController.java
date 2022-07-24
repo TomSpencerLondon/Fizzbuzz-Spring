@@ -21,8 +21,7 @@ public class PollApiController {
   @PostMapping("/api/fizzbuzz")
   @ResponseStatus(HttpStatus.CREATED)
   public String fizzBuzz(@RequestParam String number) {
-    this.service.play(number);
-
-    return this.service.result();
+    service.play(number);
+    return service.result();
   }
 }
