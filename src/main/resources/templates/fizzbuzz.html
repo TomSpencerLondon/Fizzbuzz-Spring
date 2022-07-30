@@ -23,25 +23,23 @@
   async function main() {
     let element = document.getElementById("number");
     let count = parseInt(element.getAttribute("data-number"));
-    let restart = document.getElementById("restart");
     let reqNumber = 1;
-    while (true) {
-      await new Promise(r => setTimeout(r, 1000));
-      // post return location to do fetch get request
+
+    let intervalId  = setInterval(async function () {
       await fetch(`/api/fizzbuzz?number=${reqNumber}`, {method: "POST", timeout: 1000});
       await fetch(`/api/fizzbuzz`, {method: "GET"})
-        .then(response => response.text())
-        .then(result => {
-           element.textContent = result.toUpperCase();
-        });
+      .then(response => response.text())
+      .then(result => {
+        element.textContent = result.toUpperCase();
+      });
+
+      if (reqNumber === count) {
+        element.setAttribute("data-number", 0);
+        clearInterval(intervalId);
+      }
 
       reqNumber++;
-      count--;
-      if (count === 0) {
-        element.setAttribute("data-number", 0);
-        break;
-      }
-    }
+    }, 1000)
   }
 
   main();
